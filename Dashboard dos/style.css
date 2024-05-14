@@ -222,6 +222,12 @@ header{
     gap: 10px;
 }
 
+.features-product {
+    margin: 50px;
+
+
+}
+
 .features-product .feature-product{
     padding: 25px 30px;
     display: flex;
@@ -375,7 +381,6 @@ translate: 0;
 }
 
 .card-producto-relacionado .container-price p i{
-   
     color:#dd0606;
 }
 
@@ -469,6 +474,10 @@ color: #da3b9d
     color: #374151;
 }
 
+.logo-footer{
+    width: 150px;
+}
+
 .user-footer ul, .container-policies ul{
 display:flex;
 flex-direction: column;
@@ -496,7 +505,9 @@ color: #4b5563;
     display: none;
 }    
 
-    @media(max-width:700px){
+ /***** COMPUTADORAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA *****/
+
+    @media(max-width:768px){
         .container{
             max-width: 600px;
         }
@@ -519,8 +530,9 @@ color: #4b5563;
         .menu-responsive.active{
             display: flex;
         }
-        .logo-responsive{
-            padding: 24px 20px 0 20px;
+        .Logo-responsive{
+            margin: 50px 50px 0px 50px;
+   
         }
         .menu-responsive > p{
             padding: 0 20px;
@@ -530,11 +542,13 @@ color: #4b5563;
         .container-social-responsive{
             display: flex;
             gap: 15px;
-            padding:  0 20px;
+            padding:  0 15px;
+            width: 40%;
+           
         }
          .container-social-responsive a{
         text-decoration: none;
-        font-size: 30px;
+        font-size: 25px;
          }
          .btn-close-responsive{
             position: absolute;
@@ -595,12 +609,19 @@ color: #4b5563;
          .header .menu-nav{
             display: none;
          }
+
+         
     }
 
+    /***** TABLEEEEEEEEEEEEEEEET *****/
 
-    @media(max-width: 768px){
+    @media(max-width: 700px){
         .container{
             max-width: 500px;
+        }
+
+        .logo-footer{
+            width: 80px
         }
 
         .header{
@@ -648,6 +669,8 @@ color: #4b5563;
         }
     }
 
+    /***** TELEFONOOOOOOOOOOOOOOOOOOOOOOOOOOO *****/
+
     @media (max-width:468px){
         .container{
             max-width: 300px;
@@ -694,5 +717,20 @@ color: #4b5563;
         .container-social i{
             font-size: 20px;
         }
+
+        .carrito:hover{
+            background-color: #f30303 ;
+            margin-right: 50px;
+            width: 100px;
+            margin-top: 200px;
+            display: flex;
     }
+
+    .logo-footer{
+        width: 120px;
+        margin-top: 80px;
+        margin-left: 15px;
+    }
+
+}
 
