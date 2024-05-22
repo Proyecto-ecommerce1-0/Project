@@ -83,7 +83,6 @@ body {
 }
 
 .form-information-dos {
-  width: 40%;
   left: 30%;
   padding: 40px;
   display: flex;
@@ -104,18 +103,32 @@ body {
 .form-information-childs-dos p {
   color: #555;
   font-size: 0.8rem;
+  max-width: 300px;
 }
 
 .input-link-dos p {
   color: #555;
   font-size: 0.7rem;
-  text-align: right;
-  margin: 13px 0;
+  margin: 25px 0 0px;
 }
 
 .form .input-link {
   margin-top: 10px;
   font-size: 0.7rem;
+}
+
+/******* VALIDAR CONTRASEÑAS *******/
+
+.error {
+  border-color: red;
+}
+
+.error::placeholder {
+  color: red;
+}
+
+.error + .bx-lock-open-alt:before {
+  color: red;
 }
 
 a {
