@@ -34,13 +34,40 @@
             <div class="menu-hamburger">
                 <i class="fa-solid fa-bars"></i>
             </div>
-
-
+            
             <div class="carrito">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <div class="count-products-cart">0</div>
             </div>
 
+            <div class="carrito">
+                <label for="usuario-icono">
+                  <h6>Hola, usuario</h6>
+                  <i class="bx bx-user-voice" id="usuario-icono" name="usuario-icono"></i></label>
+                <div class="opciones-usuario" id="opciones-usuario">
+                  <ul>
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Cambiar Contraseña</a></li>
+                    <li><a href="../Login/Login.html">Cerrar Sesión</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <script>
+                const usuarioIcono = document.getElementById('usuario-icono');
+                const opcionesUsuario = document.getElementById('opciones-usuario');
+
+            usuarioIcono.addEventListener('click', () => {
+             opcionesUsuario.classList.toggle('mostrar'); /* Agregamos o quitamos la clase mostrar */
+            });
+
+            document.addEventListener('click', (e) => {
+            if (!e.target.closest('.carrito')) { /* Si el clic no es dentro del elemento .carrito */
+                opcionesUsuario.classList.remove('mostrar'); /* Ocultamos las opciones */
+            }
+            });
+              </script>
+            
         </div>
         <div class="menu-responsive">
 
@@ -79,7 +106,6 @@
         <div id="overlay"></div> 
     </header>
 
-
     <main class="container">
         <div class="grid-images">
             <div class="imagen-producto image-1">
@@ -98,10 +124,7 @@
                 <img src="/imagenes/negro01.jpg" alt="Imagen-Producto 5">
             </div>
         </div>
-
-
-
-      
+        
                         <div class="features-product">
                             <div class="feature-product shipping">
                                 <i class="fa-solid fa-truck-fast"></i>
