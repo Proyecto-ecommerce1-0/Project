@@ -109,6 +109,109 @@ header{
 
 }
 
+.carrito label {
+    display: flex; /* Agregamos display: flex; */
+    align-items: center; /* Agregamos align-items: center; */
+  }
+  
+  .carrito label h6 {
+    display: block; /* Agregamos display: block; */
+    text-align: center;
+  }
+
+  .carrito label h6:hover{
+    cursor: pointer;
+  }
+
+.opciones-usuario {
+    display: none; /* Ocultamos las opciones por defecto */
+    position: absolute; /* Posicionamos las opciones absolutamente */
+    top: 40px; /* Ajustamos la posición vertical */
+    right: 0; /* Ajustamos la posición horizontal */
+    background-color: #f9f9f9; /* Color de fondo de las opciones */
+    border: 1px solid #ccc; /* Borde de las opciones */
+    padding: 10px; /* Espacio entre el borde y el contenido */
+    border-radius: 5px; /* Redondeamos las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra debajo de las opciones */
+  }
+  
+  .opciones-usuario.mostrar {
+    display: block; /* Mostramos las opciones cuando se agrega la clase mostrar */
+  }
+  
+  .opciones-usuario ul {
+    list-style: none; /* Quitamos los puntos de la lista */
+    margin: 0; /* Quitamos el margen de la lista */
+    padding: 0; /* Quitamos el padding de la lista */
+  }
+  
+  .opciones-usuario li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+  }
+  
+  .opciones-usuario a {
+    text-decoration: none; /* Quitamos el subrayado de los enlaces */
+    color: #333; /* Color de los enlaces */
+  }
+  
+  .opciones-usuario a:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+    cursor: pointer;
+  }
+
+/***** BANNER ARMANDO ****/
+
+.titulo-ofertas {
+    font-size: 35px;
+    text-align: center;
+    color: #334155;
+    margin-top: 15px;
+}
+
+.container-ofertas img{
+    width: 100%;
+    height: 300px;
+}
+
+.slider-box {
+    width: 1280px;
+    height: auto;
+    margin: 20px auto 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 500%;
+    animation: slide 15s infinite alternate ease-in-out;
+}
+
+.slider-box li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+@keyframes slide {
+    0% { margin-left: 0; }
+    10% { margin-left: 0; }
+
+    15% { margin-left: -100%; }
+    35% { margin-left: -100; }
+
+    40% { margin-left: -200%; }
+    60% { margin-left: -200%; }
+
+    65% { margin-left: -300%; }
+    80% { margin-left: -300%; }
+
+    85% { margin-left: -400%; }
+    100% { margin-left: -400%; }
+}
+
+
 .grid-images{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -224,8 +327,6 @@ header{
 
 .features-product {
     margin: 50px;
-
-
 }
 
 .features-product .feature-product{
@@ -297,12 +398,6 @@ header{
     overflow: hidden;
     border-radius: 20px;
 }
-
-
-
-
-
-
 
 .card-producto-relacionado .image-product img{
     
@@ -589,8 +684,6 @@ color: #4b5563;
             display: block;
             flex: 1;
             order: 1;
-         
-        
          }
 
          .logo{
@@ -608,9 +701,7 @@ color: #4b5563;
         
          .header .menu-nav{
             display: none;
-         }
-
-         
+         }   
     }
 
     /***** TABLEEEEEEEEEEEEEEEET *****/
@@ -666,6 +757,14 @@ color: #4b5563;
 
         .body-details-product .info-product .features-product{
              grid-template-columns: 1fr;
+        }
+
+        .slider-box {
+            max-width: 460px;
+        }
+
+        .titulo-ofertas {
+            margin-top: 15px;
         }
     }
 
@@ -732,5 +831,12 @@ color: #4b5563;
         margin-left: 15px;
     }
 
+    .slider-box {
+        max-width: 460px;
+    }
+
+    .titulo-ofertas {
+        margin-top: 15px;
+    }
 }
 
