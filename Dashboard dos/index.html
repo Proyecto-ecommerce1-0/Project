@@ -8,8 +8,8 @@
     />
     <title>Tina Creativa</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="imagenes/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link 
     rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
@@ -35,20 +35,18 @@
             <div class="menu-hamburger">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            
-            <div class="carrito">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <div class="count-products-cart">0</div>
+
+
+            <div class="heart">
+                <i class="fa-solid fa-heart" style="color: #ec3500;"></i>
             </div>
 
             <div class="carrito">
                 <label for="usuario-icono">
-                  <h6>Hola, usuario</h6>
-                  <i class="bx bx-user-voice" id="usuario-icono" name="usuario-icono"></i></label>
+                    <i class="fa-solid fa-user" id="usuario-icono" name="usuario-icono"></i></label>
                 <div class="opciones-usuario" id="opciones-usuario">
                   <ul>
                     <li><a href="#">Perfil</a></li>
-                    <li><a href="#">Favoritos</a></li>
                     <li><a href="../Login/Login.html">Cerrar Sesión</a></li>
                   </ul>
                 </div>
@@ -68,7 +66,31 @@
             }
             });
               </script>
-            
+
+            <!--Icono -->
+<i class='bx bxs-cart-alt' id="cart-icon" ></i> 
+
+            <!--Carrito-->
+<div class="cart" >
+    <h2><div class="cart-title">Tu Carrito</div></h2>
+
+            <!--Contenido -->
+    <div class="cart-content" >
+      
+    </div>
+
+          <!--Total-->
+    <div class="total">
+        <div class="total-tittle">Total</div>
+        <div class="total-price">$0</div>
+    </div>
+         <!--Comprar-->
+    <button type="button" class="btn-buy">Comprar Ahora</button>
+
+    <i class="fa-solid fa-xmark" id="close-cart"></i>    
+
+</div>
+
         </div>
         <div class="menu-responsive">
 
@@ -106,7 +128,6 @@
         </div>
         <div id="overlay"></div> 
     </header>
-    
     <section>
         <div class="container-ofertas">
            <div class="slider-box">
@@ -150,7 +171,10 @@
                 <img src="/imagenes/negro01.jpg" alt="Imagen-Producto 5">
             </div>
         </div>
-        
+
+
+
+      
                         <div class="features-product">
                             <div class="feature-product shipping">
                                 <i class="fa-solid fa-truck-fast"></i>
@@ -201,7 +225,7 @@
         
         <div class="info-product">
             <div class="container-title">
-                <h4>libreta para la clase</h4>
+                <h4 class="product-title">libreta para la clase</h4>
                 <p>Color Morado</p>
             </div>
             <div class="container-price">
@@ -217,11 +241,11 @@
 
     <div class="card-producto-relacionado">
         <div class="image-product">
-            <img src="/imagenes/lapicero 01.jpg" alt="Producto Relacionado 2">
+            <img src="/imagenes/lapicero 01.jpg" alt="Producto Relacionado 2" class="product-img">
 
             <div class="button-group">
                 <button class="btn-add-to-bag">
-                    <i class="fa-solid fa-bag-shopping"></i>
+                    <i class="fa-solid fa-bag-shopping add-cart"></i>
                     Añadir a la cesta
                 </button>
                 <button class="btn-quick-view">
@@ -233,11 +257,11 @@
         
         <div class="info-product">
             <div class="container-title">
-                <h4>libreta para la clase</h4>
+                <h4 class="product-title">libreta para la clase</h4>
                 <p>Color Morado</p>
             </div>
             <div class="container-price">
-                <span>$3,00</span>
+                <span class="price">$3,00</span>
                 <p>
                     <i class="fa-solid fa-heart"></i>
                     Guardar
