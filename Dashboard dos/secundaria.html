@@ -7,6 +7,7 @@
     <title>Secundaria</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="imagenes/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link 
     rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
@@ -16,7 +17,7 @@
 </head>
 <header>
     <div class="header container">
-        <h1 class="logo"><img src="/imagenes/logo-removebg-preview.png" alt="logo"></h1>
+        <h1 class="logo"><img src="imagenes/logo-removebg-preview.png" alt="logo"></h1>
 
         <nav>
             <ul class="menu-nav">
@@ -32,16 +33,64 @@
             <i class="fa-solid fa-bars"></i>
         </div>
 
+        <div class="heart">
+            <i class="fa-solid fa-heart" style="color: #ec3500;"></i>
+        </div>
 
         <div class="carrito">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <div class="count-products-cart">0</div>
-        </div>
+            <label for="usuario-icono">
+                <i class="fa-solid fa-user" id="usuario-icono" name="usuario-icono"></i></label>
+            <div class="opciones-usuario" id="opciones-usuario">
+              <ul>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="../Login/Login.html">Cerrar Sesión</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <script>
+            const usuarioIcono = document.getElementById('usuario-icono');
+            const opcionesUsuario = document.getElementById('opciones-usuario');
+
+        usuarioIcono.addEventListener('click', () => {
+         opcionesUsuario.classList.toggle('mostrar'); /* Agregamos o quitamos la clase mostrar */
+        });
+
+        document.addEventListener('click', (e) => {
+        if (!e.target.closest('.carrito')) { /* Si el clic no es dentro del elemento .carrito */
+            opcionesUsuario.classList.remove('mostrar'); /* Ocultamos las opciones */
+        }
+        });
+          </script>
+
+        <!--Icono -->
+<i class='bx bxs-cart-alt' id="cart-icon" ></i> 
+
+        <!--Carrito-->
+<div class="cart" >
+<h2><div class="cart-title">Tu Carrito</div></h2>
+
+        <!--Contenido -->
+<div class="cart-content" >
+ 
+</div>
+
+      <!--Total-->
+<div class="total">
+    <div class="total-tittle">Total</div>
+    <div class="total-price">$0</div>
+</div>
+     <!--Comprar-->
+<button type="button" class="btn-buy">Comprar Ahora</button>
+
+<i class="fa-solid fa-xmark" id="close-cart"></i>    
+
+</div>
 
     </div>
     <div class="menu-responsive">
 
-        <h1 class="Logo-responsive"><img src="/imagenes/logo-removebg-preview.png" alt="logo"></h1>
+        <h1 class="Logo-responsive"><img src="imagenes/logo-removebg-preview.png" alt="logo"></h1>
 
         <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -84,7 +133,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/segundaria01.jpg" alt="Producto Relacionado 1">
+                <img src="imagenes/segundaria01.jpg" alt="Producto Relacionado 1">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -116,7 +165,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/segundaria02.jpg" alt="Producto Relacionado 2">
+                <img src="imagenes/segundaria02.jpg" alt="Producto Relacionado 2">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -147,7 +196,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/bolso 02.jpg" alt="Producto Relacionado 3">
+                <img src="imagenes/bolso 02.jpg" alt="Producto Relacionado 3">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -178,7 +227,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/bolso 03.jpg" alt="Producto Relacionado 3">
+                <img src="imagenes/bolso 03.jpg" alt="Producto Relacionado 3">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -211,7 +260,7 @@
 
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/negro02.jpg" alt="Producto Relacionado 1">
+                <img src="imagenes/negro02.jpg" alt="Producto Relacionado 1">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -243,7 +292,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/segundaria09.jpg" alt="Producto Relacionado 2">
+                <img src="imagenes/segundaria09.jpg" alt="Producto Relacionado 2">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -274,7 +323,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/segundaria10.jpg" alt="Producto Relacionado 3">
+                <img src="imagenes/segundaria10.jpg" alt="Producto Relacionado 3">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -305,7 +354,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/segundaria05.jpg" alt="Producto Relacionado 3">
+                <img src="imagenes/segundaria05.jpg" alt="Producto Relacionado 3">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -338,7 +387,7 @@
 
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/segundaria06.jpg" alt="Producto Relacionado 1">
+                <img src="imagenes/segundaria06.jpg" alt="Producto Relacionado 1">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -370,7 +419,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/segundaria07.jpg" alt="Producto Relacionado 2">
+                <img src="imagenes/segundaria07.jpg" alt="Producto Relacionado 2">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -401,7 +450,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/bolso 04.jpg" alt="Producto Relacionado 3">
+                <img src="imagenes/bolso 04.jpg" alt="Producto Relacionado 3">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -432,7 +481,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/primaria30.jpg" alt="Producto Relacionado 3">
+                <img src="imagenes/primaria30.jpg" alt="Producto Relacionado 3">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -465,7 +514,7 @@
 
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/segundaria03.jpg" alt="Producto Relacionado 1">
+                <img src="imagenes/segundaria03.jpg" alt="Producto Relacionado 1">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -497,7 +546,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/negro04.jpg" alt="Producto Relacionado 2">
+                <img src="imagenes/negro04.jpg" alt="Producto Relacionado 2">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -528,7 +577,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/morado04.jpg" alt="Producto Relacionado 3">
+                <img src="imagenes/morado04.jpg" alt="Producto Relacionado 3">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -559,7 +608,7 @@
     
         <div class="card-producto-relacionado">
             <div class="image-product">
-                <img src="/imagenes/segundaria04.jpg" alt="Producto Relacionado 3">
+                <img src="imagenes/segundaria04.jpg" alt="Producto Relacionado 3">
     
                 <div class="button-group">
                     <button class="btn-add-to-bag">
@@ -595,7 +644,7 @@
          
     <div class="container footer">
        
-            <h1 class="logo-footer"><img src="/imagenes/logo-removebg-preview.png" alt="logo"></h1>
+            <h1 class="logo-footer"><img src="imagenes/logo-removebg-preview.png" alt="logo"></h1>
 
             <div class="container-social">
             <a href="#"  class="Facebook">
@@ -631,5 +680,5 @@
    </div> 
 
 </footer>
-
+<script src="index.js"></script>
 </html>
