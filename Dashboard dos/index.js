@@ -70,7 +70,24 @@ function ready(){
   }
 }
 
+//button work
 
+document
+.getElementsByClassName('btn-buy')[0]
+.addEventListener('click',buyButtonClicked);
+
+
+//buy button
+
+function buyButtonClicked(){
+alert('Your Order is placed')
+
+var cartContent = document.getElementsByClassName('cart-content')[0]
+while (cartContent.hasChildNodes()){
+  cartContent.removeChild(cartContent.firstChild);
+}
+updateTotal();
+}
 
 function removeCartItem(event){
   var buttonClicked = event.target
@@ -81,9 +98,9 @@ function removeCartItem(event){
 //quantity changes
 
 function quantityChanged(event){
-  var input = event.target
+  var input = event.target;
   if (isNaN(input.value)||input.value <= 0) {
-    input.value = 1 
+    input.value = 1 ;
   }
   updateTotal();
 }
@@ -94,16 +111,16 @@ function addCartClicked(event){
   var title = shopProducts.getElementsByClassName('product-title')[0].innerText;
   var price = shopProducts.getElementsByClassName('price')[0].innerText;
   var productImg = shopProducts.getElementsByClassName('product-img')[0].src;
-
   addProductToCart(title, price, productImg);
+
   updateTotal();
 }
 
 function addProductToCart(title, price, productImg){
   var cartShoBox = document.createElement('div');
-  //cartsShoBox.classList.add('cart-box')
-  var cartItems = document.getElementsByClassName('card-producto-relacionado')[0]
-  var cartItemsNames = cartItems.getElementsByClassName('product-title')
+  cartsShoBox.classList.add('cart-box')
+  var cartItems = document.getElementsByClassName('cart-content')[0]
+  var cartItemsNames = cartItems.getElementsByClassName('cart-product-title')
   for (var i = 0; i < cartItemsName.length; i++){
     alert ('Ya has añadido este artículo en el carrito')
     return;
@@ -113,10 +130,10 @@ function addProductToCart(title, price, productImg){
 
 var cartBoxContent = `
 
-<img src="/imagenes/negro04.jpg" alt="" class="cart-img">
+<img src="${productImg}" alt="" class="cart-img">
 <div class="detail-box">
-   <div class="cart-product-title">libreta</div>
-   <div class="cart-price">$2.04</div>
+   <div class="cart-product-title">${title}</div>
+   <div class="cart-price">${price}</div>
    <input type="number" value="1" class="cart-quantity">
 </div>
 
@@ -124,11 +141,11 @@ var cartBoxContent = `
 <i class="fa-solid fa-trash cart-remove"></i> `
 
 cartShopBox.innerHTML = cartBoxContent
-cartItems.append(cartShopBox)
+cartItems.append(cartShopBox);
 cartShopBox.getElementsByClassName('cart-remove')[0]
-.addEventListener('click', removeCartItem)
+.addEventListener('click', removeCartItem);
 cartShopBox.getElementsByClassName('cart-quantity')[0]
-.addEventListener('change', removeCartItem)
+.addEventListener('change', quantityChanged);
 
 
 
@@ -136,19 +153,19 @@ cartShopBox.getElementsByClassName('cart-quantity')[0]
 
 function updateTotal(){
   var cartContent = document.getElementsByClassName('cart-content')[0]
-  var cartBoxes = cartContent.getElementsByClassName('cart-box')
-  var total = 0
+  var cartBoxes = cartContent.getElementsByClassName('cart-box');
+  var total = 0;
   for (var i = 0; i  < cartBoxes.length; i++){
-    var cartBox = cartBoxes[i]
-    var priceElement = cartBox.getElementsByClassName('cart-price')[0]
-    var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0]
-    var quantity = quantityElement.value
-    var price = parseFloat(priceElement.innerText.replace("$",""))
+    var cartBox = cartBoxes[i];
+    var priceElement = cartBox.getElementsByClassName('cart-price')[0];
+    var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
+    var price = parseFloat(priceElement.innerText.replace("$",""));
+    var quantity = quantityElement.value;
     total= total + (price * quantity);
-    
+  }
     //if price contain
     total = Math.round(total * 100) / 100;
 
     document.getElementsByClassName('total-price')[0].innerText = '$' + total;
-  }
+  
 }
