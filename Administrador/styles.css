@@ -11,10 +11,10 @@ body {
 
 header {
   display: flex;
-  align-items: center;
+  align-items: center; /* Centra verticalmente los elementos */
+  width: 100%;
   background-color: aqua;
-  justify-content: space-between;
-  gap: 100px;
+  border-bottom: 1px solid #f1f5f9;
 }
 
 header img {
@@ -23,19 +23,24 @@ header img {
 }
 
 .container-logo {
-  text-align: center;
   background-color: red;
-  margin-left: 80px;
+  margin-left: 5rem;
+  padding: 10px 10px 0 10px;
 }
 
 .container-titulo {
   background-color: green;
+  margin: 0 auto; /* Centra horizontalmente el título */
+  flex-grow: 1; /* Ocupa el espacio disponible */
+  text-align: center; /* Centra el texto horizontalmente */
 }
 
 .container-usuario {
   background-color: yellow;
-  margin-right: 150px;
+  margin-left: auto; /* Coloca el contenedor del icono a la derecha */
+  margin-right: 6.5rem;
 }
+
 #usuario-icono {
   font-size: 1.8rem;
 }
@@ -56,6 +61,7 @@ header img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra debajo de las opciones */
   overflow: hidden;
   width: 10rem;
+  border-radius: 10px;
 }
 
 .opciones-usuario.mostrar {
@@ -74,7 +80,7 @@ header img {
   height: 20px;
   align-items: center;
   display: flex;
-  font-size: 1.2rem;
+  font-size: rem;
 }
 
 .opciones-usuario a {
@@ -129,6 +135,7 @@ header img {
   width: 100px;
   height: 100px;
 }
+
 .btn {
   margin-top: 15px;
   padding: 0.5rem 15px;
@@ -148,9 +155,8 @@ header img {
 
 @media (max-width: 768px) {
   .container-logo {
-    text-align: center;
-    background-color: red;
-    margin-left: 40px;
+    margin-left: 1rem;
+    margin-right: auto;
   }
 
   .container-titulo {
@@ -159,11 +165,11 @@ header img {
 
   .container-usuario {
     background-color: yellow;
-    margin-right: 150px;
+    margin-right: 2.5rem;
+    margin-left: auto;
   }
 
   .container-modulos {
-    display: block;
     margin: 0;
   }
 
