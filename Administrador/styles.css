@@ -5,15 +5,12 @@
   font-family: "Nunito", sans-serif;
 }
 
-body {
-  background-color: gray;
-}
+/* HEADER */
 
 header {
   display: flex;
   align-items: center; /* Centra verticalmente los elementos */
   width: 100%;
-  background-color: aqua;
   border-bottom: 1px solid #f1f5f9;
 }
 
@@ -23,22 +20,30 @@ header img {
 }
 
 .container-logo {
-  background-color: red;
-  margin-left: 5rem;
+  margin-left: 4rem;
   padding: 10px 10px 0 10px;
 }
 
 .container-titulo {
-  background-color: green;
   margin: 0 auto; /* Centra horizontalmente el título */
   flex-grow: 1; /* Ocupa el espacio disponible */
   text-align: center; /* Centra el texto horizontalmente */
 }
 
 .container-usuario {
-  background-color: yellow;
   margin-left: auto; /* Coloca el contenedor del icono a la derecha */
   margin-right: 6.5rem;
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.container-usuario:hover {
+  background-color: #fde2f0;
+  transition: .9s;
 }
 
 #usuario-icono {
@@ -56,16 +61,17 @@ header img {
   display: none; /* Ocultamos las opciones por defecto */
   position: absolute; /* Posicionamos las opciones absolutamente */
   top: 10%; /* Ajustamos la posición vertical */
-  right: 6%; /* Ajustamos la posición horizontal */
+  right: 2%; /* Ajustamos la posición horizontal */
   background-color: #f9f9f9; /* Color de fondo de las opciones */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra debajo de las opciones */
   overflow: hidden;
-  width: 10rem;
+  width: auto;
   border-radius: 10px;
 }
 
 .opciones-usuario.mostrar {
   display: block; /* Mostramos las opciones cuando se agrega la clase mostrar */
+  transition: .9s;
 }
 
 .opciones-usuario ul {
@@ -93,15 +99,18 @@ header img {
 }
 
 .li-box:hover {
-  background-color: rgb(216, 216, 216);
+  background-color: #fde2f0;
 }
 
+
+/* BODY ADMINISTRADOR */
+
 .Admin {
-  background-color: rgb(223, 128, 84);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rosybrown;
 }
 
 .titulo-administrador {
@@ -113,12 +122,11 @@ header img {
   padding: 50px 0;
   max-width: 750px;
   flex-wrap: wrap;
-  background-color: rgb(255, 127, 191);
   gap: 2rem;
   display: flex;
+  background-color: rebeccapurple;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .modulos-box {
@@ -131,6 +139,10 @@ header img {
   padding: 15px 50px;
 }
 
+.modulos-box:hover {
+  background-color: #fde2f0;
+}
+
 .modulos-box img {
   width: 100px;
   height: 100px;
@@ -140,7 +152,7 @@ header img {
   margin-top: 15px;
   padding: 0.5rem 15px;
   text-decoration: none;
-  background-color: rgb(0, 81, 255);
+  background-color: #f788c1;
   display: block;
   border-radius: 0.5rem;
   font-size: 0.9rem;
@@ -149,22 +161,88 @@ header img {
 }
 
 .btn:hover {
+  transition: .5s;
   background-color: black;
-  font-size: 1rem;
 }
+
+/* PRODUCTOS */
+
+.modulos-box-productos {
+  background-color: rgb(255, 255, 255);
+  border: 2.5px solid black;
+  border-radius: 10px;
+  background-color: yellow;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-input {
+  padding: 10px;
+  max-width: 550px;
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 0rem;
+  font-size: 0.5rem;
+  justify-content: space-between;
+}
+
+.input {
+  background-color: red;
+  width: 49%;
+  text-align: center;
+  gap: 10rem 0;
+
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ccc;
+}
+
+
+
+
+.modulos-box:hover {
+  background-color: #fde2f0;
+}
+
+.btn-p {
+  width: 100%;
+  border-radius: .5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-p:hover {
+  transition: .5s;
+  background-color: rgb(235, 146, 146);
+}
+
+
+
+
+
+/* RESOLUCION RESPONSIVE*/
+
 
 @media (max-width: 768px) {
   .container-logo {
-    margin-left: 1rem;
+    margin-left: .2rem;
     margin-right: auto;
   }
 
-  .container-titulo {
-    background-color: green;
-  }
-
   .container-usuario {
-    background-color: yellow;
     margin-right: 2.5rem;
     margin-left: auto;
   }
@@ -175,5 +253,12 @@ header img {
 
   .modulos-box {
     margin: 20px auto;
+  }
+  .modulos-box-productos {
+    max-width: 400px;
+  }
+
+  .container-input {
+    max-width: 350px;
   }
 }
