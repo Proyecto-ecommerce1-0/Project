@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="producto.css">
     <title>libre de color negro</title> 
     <link rel="icon" href="imagenes/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link 
     rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
@@ -18,15 +19,15 @@
 
     <header>
             <div class="header container">
-                <h1 class="logo"><img src="/imagenes/logo-removebg-preview.png" alt="logo"></h1>
+                <h1 class="logo"><img src="imagenes/logo-removebg-preview.png" alt="logo"></h1>
     
                 <nav>
                     <ul class="menu-nav">
-                        <li><a href="">Inicio</a></li>
-                        <li><a href="">Oficina</a></li>
-                        <li><a href="">Prescolar</a></li>
-                        <li><a href="">Primaria</a></li>
-                        <li><a href="">Secundaria</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="oficina.html">Oficina</a></li>
+                        <li><a href="prescolar.html">Prescolar</a></li>
+                        <li><a href="primaria.html">Primaria</a></li>
+                        <li><a href="secundaria.html">Secundaria</a></li>
                                    
                     </ul>
                 </nav>
@@ -35,15 +36,64 @@
                 </div>
     
     
-                <div class="carrito">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <div class="count-products-cart">0</div>
+                <div class="heart">
+                    <i class="fa-solid fa-heart" style="color: #ec3500;"></i>
                 </div>
+    
+                <div class="carrito">
+                    <label for="usuario-icono">
+                        <i class="fa-solid fa-user" id="usuario-icono" name="usuario-icono"></i></label>
+                    <div class="opciones-usuario" id="opciones-usuario">
+                      <ul>
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="../Login/Login.html">Cerrar Sesión</a></li>
+                      </ul>
+                    </div>
+                  </div>
+    
+                  <script>
+                    const usuarioIcono = document.getElementById('usuario-icono');
+                    const opcionesUsuario = document.getElementById('opciones-usuario');
+    
+                usuarioIcono.addEventListener('click', () => {
+                 opcionesUsuario.classList.toggle('mostrar'); /* Agregamos o quitamos la clase mostrar */
+                });
+    
+                document.addEventListener('click', (e) => {
+                if (!e.target.closest('.carrito')) { /* Si el clic no es dentro del elemento .carrito */
+                    opcionesUsuario.classList.remove('mostrar'); /* Ocultamos las opciones */
+                }
+                });
+                  </script>
+            <div class="car">
+                <!--Icono -->
+    <i class='bx bxs-cart-alt' id="cart-icon" ></i> 
+    
+                <!--Carrito-->
+    <div class="cart" >
+        <h2><div class="cart-title">Tu Carrito</div></h2>
+    
+                <!--Contenido -->
+        <div class="cart-content" >
+         
+        </div>
+    
+              <!--Total-->
+        <div class="total">
+            <div class="total-tittle">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+             <!--Comprar-->
+        <button type="button" class="btn-buy">Comprar Ahora</button>
+    
+        <i class="fa-solid fa-xmark" id="close-cart"></i>    
+    </div>
+    </div>
     
             </div>
             <div class="menu-responsive">
 
-                <h1 class="Logo-responsive"><img src="/imagenes/logo-removebg-preview.png" alt="logo"></h1>
+                <h1 class="Logo-responsive"><img src="imagenes/logo-removebg-preview.png" alt="logo"></h1>
     
                 <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -64,11 +114,11 @@
             </div>
             <nav>
                 <ul class="menu-nav-responsive">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Oficina</a></li>
-                    <li><a href="#">Prescolar</a></li>
-                    <li><a href="#">Primaria</a></li>
-                    <li><a href="#">Secundaria</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="oficina.html">Oficina</a></li>
+                    <li><a href="prescolar.html">Prescolar</a></li>
+                    <li><a href="primaria.html">Primaria</a></li>
+                    <li><a href="secundaria.html">Secundaria</a></li>
                 </ul>
             </nav>
             <div class="btn-close-responsive">
@@ -80,13 +130,13 @@
     </header>
     <main class="container">
     <div class="imagen-producto">
-       <img src="/imagenes/negro03.jpg" alt="Producto-Relacionado">
+       <img src="imagenes/negro03.jpg" alt="Producto-Relacionado">
     </div>
 
     <div class="container-details-product">
         <div class="aside-details-product">
             <div class="header-details-product">
-                <h1>Heavy weight hoodle</h1>
+                <h1>Libreta con Estampado de Araña</h1>
                 <div class="row">
                     <div class="share">
                         <button class="btn">
@@ -186,12 +236,8 @@
                         <div class="container-card-payment">
                             <div class="card-payment">
                                 <div class="header">
-                                    <p class="price">$10,00</p>
-                                    <p class="count-reviews">
-                                        <i class="fa-solid fa-star"></i>
-                                        4.9 -
-                                        <span> 142 reseñas</span>
-                                    </p>
+                                    <p class="price">$2,00</p>
+                                    
                                 </div>
                                 <div class="colors">
                                     <p>color: <span 
