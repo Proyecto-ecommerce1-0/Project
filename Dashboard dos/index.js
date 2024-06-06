@@ -1,6 +1,15 @@
 /*  *************** */
 /*  MENU RESPONSIVE */
 /*  ***************  */
+function redireccionar() {
+  console.log("Botón clickeado!");
+  if (window.location.assign) {
+      window.location.assign("producto.html");
+      console.log("Redireccionando a producto.html...");
+  } else {
+      console.error("Error: no se puede redireccionar a producto.html");
+  }
+}
 
 let overlay = document.querySelector('#overlay');
 let menuHamburger = document.querySelector('.menu-hamburger');
@@ -50,7 +59,6 @@ if(document.readyState == 'loading') {
 
 function ready(){
   var reomveCartButtons = document.getElementsByClassName('cart-remove')
-  console.log (reomveCartButtons)
   for (var i = 0; i < reomveCartButtons.length; i++){
     var button = reomveCartButtons[i]
     button.addEventListener('click', removeCartItem)
@@ -128,6 +136,7 @@ function addProductToCart(title, price, productImg){
   
 }
 
+/*
 var cartBoxContent = `
 
 <img src="${productImg}" alt="" class="cart-img">
@@ -146,7 +155,7 @@ cartShopBox.getElementsByClassName('cart-remove')[0]
 .addEventListener('click', removeCartItem);
 cartShopBox.getElementsByClassName('cart-quantity')[0]
 .addEventListener('change', quantityChanged);
-
+*/
 
 
 //Funcion del Total//
@@ -172,16 +181,11 @@ function updateTotal(){
 
 //BUTTOOOON//
 
-const button = document.getElementById("myButton");
 
 
-button.addEventListener("click", function() {
 
-  window.location.href = producto.html;
+/*
+total = Math.round(total * 100) / 100;
 
-});
-    total = Math.round(total * 100) / 100;
-
-    document.getElementsByClassName('total-price')[0].innerText = '$' + total;
-  
-}
+document.getElementsByClassName('total-price')[0].innerText = '$' + total;
+*/
