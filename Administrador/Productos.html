@@ -55,28 +55,54 @@
 
         <div class="container-modulos">    
             <div class="modulos-box-productos">
-                <div class="container-input">
 
+
+            <div class="select-imagen">
+                <div class="drop-zone">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    <p>Subir una imagen o arrastrar y soltar<br>PNG, JPG, WEBP hasta 5MB</p>
+                    <input type="file" id="fileInput" style="display: none;">
+                </div>
+            </div>
+                <script src="script.js"></script>
+
+                <div class="container-input">
+                    
                     <div class="input">
                         <label for="nombre-producto"><h2>Nombre del Producto</h2>
-                        <input id="nombre-producto" type="text" placeholder="Ingresa tu Segundo Nombre" required></label>
+                        <input id="nombre-producto" type="text" placeholder="Ingrese el nombre del producto" required></label>
                     </div>
 
                     <div class="input">
                         <label for="codigo-producto"><h2>Código del Producto</h2>
-                        <input id="codigo-producto" type="text" placeholder="Ingresa tu Segundo Nombre" required></label>
+                        <input id="codigo-producto" type="text" placeholder="Ingrese el codigo del producto" required></label>
                     </div>
 
                     <div class="input">
-                        <label for="desc-corta"><h2>Descripcion Corta</h2>
-                        <input id="desc-corta" type="text" placeholder="Ingresa tu Segundo Nombre" required></label>
+                        <label for="descripcion"><h2>Descripcion Corta</h2>
+                        <textarea name="descripcion" id="descripcion" cols="30" rows="10" style="resize: vertical;"></textarea></label>
                     </div>
 
                     <div class="input">
-                        <label for="desc-larga"><h2>Descripcion Larga</h2>
-                        <input id="desc-larga" type="text" placeholder="Ingresa tu Segundo Nombre" required></label>
+                        <label for="descripcion"><h2>Descripcion Larga</h2>
+                        <textarea name="descripcion" id="descripcion" cols="30" rows="10" style="resize: vertical;"></textarea></label>
                     </div>
+
+                    <div class="input">
+                        <label for="precio-producto"><h2>Precio del Producto</h2>
+                        <input id="precio-producto-larga" type="number" placeholder="Ingresa el precio del producto" required></label>
+                    </div>
+
+                    <div class="input">
+                        <label for="status-producto"><h2>Status</h2>
+                          <select name="status-producto" id="status-producto" required></label>
+                            <option value="Inactivo">Inactivo</option>
+                            <option value="Activo">Activo</option>
+                          </select>
+                        </div>
+                    
                     <input type="submit" value="AGREGAR PRODUCTO" class="btn-p" name="add_product">
+
                 </div>
             </div>
         </div>
