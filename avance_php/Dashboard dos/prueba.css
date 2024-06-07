@@ -1,0 +1,311 @@
+.container-details-product{
+    display: flex;
+    gap: 20px;
+    }
+    
+    .aside-details-product{
+        flex: 1.6;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .header-details-product h2{
+        font-size: 30px;
+        font-weight: 700;
+    
+    }
+    
+    .header-details-product .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+    
+    .header-details-product .share{
+      display: flex;
+      align-items: center;
+      gap:5px;
+    }
+    
+    .share .btn{
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    gap: 10px;
+    padding: 6px  12px;
+    background: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 500;
+    }
+    
+    .share .btn:hover{
+        background-color: #f3f4f6;
+        color: #374151;
+    }
+    .header-details-product .calification{
+    
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .header-details-product .calification i{
+    color: #1e293b;
+    font-size: 15px;
+    margin-bottom: 3px;
+    }
+    
+    .header-details-product .calification p span{
+        text-decoration: underline;
+        color: #334157;
+    
+    }
+    
+    .info-details-product{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .acordeon-button{
+        width: 100%;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: none;
+        background-color: #f5f8fb;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    
+    .acordeon-button.active + .acordeon-content{
+        opacity: 1;
+    
+    }
+    
+    .acordeon-button:hover{
+        background-color: #eef1f6;
+    
+    }
+    
+    .container-acordeon{
+        position: relative;
+    }
+    
+    .acordeon-content{
+        padding: 0 20px;
+        color: #475569;
+        font-size: 16px;
+        transition: all .3s ease-in-out;
+        overflow: hidden;
+        height: 0;
+    }
+
+
+
+
+    .container-card-payment{
+        flex: 1;
+    }
+    
+    .card-payment{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 30px;
+        border-radius:  20px;
+        position: sticky;
+        top: 120px;
+        box-shadow:  0 10px 15px #00000020;
+        justify-content: space-between;
+        border: 1px solid #e5e7eb;
+    }
+    
+    .card-payment.header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .card-payment.header.price{
+        font-weight:700;
+        font-size: 24px;
+    }
+    
+    .card-payment.header.count-reviews{
+    font-size: 14px;
+    }
+    
+    .card-payment.header.count-reviews i{
+        color: #fb923c;
+    
+    }
+    
+    .card-payment.header.count-reviews span{
+        color: #334155;
+        text-decoration: underline;
+    }
+    .card-payment .colors{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .card-payment .colors > p{
+        font-size:  14px;
+        text-transform: capitalize;
+    }
+    
+    .card-payment .colors > p span {
+        font-weight: 700;
+    }
+    .row-colors{
+        display: flex;
+        gap: 9px;
+    }
+    
+    .row-colors .container-color{
+    background-color:  #333;
+    flex: 1;
+    height: 32px;
+    border-radius: 20px;
+    cursor: pointer;
+    }
+    
+    .row-colors .container-color.selected{
+    
+        outline: 2px solid #050607;
+        outline-offset: 2px;
+    
+    }
+    .row-colors .color-purple{
+        background-color: #d06fee;
+    }
+    
+    .row-colors .color-black{
+        background-color: #000;
+    }
+    
+    .row-colors .color-white{
+        background-color: #eaeaea;
+    }
+    
+    .row-colors .color-pink{
+        background-color: #f189ba;
+    }
+    
+
+    .quantity{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .container-add-quantity{
+        display: flex;
+        align-items:  center;
+        gap: 15px;
+    }
+    
+    .add-quantity{
+        background-color: #f5f8fb;
+        padding: 4px;
+        flex: 1.2;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .add-quantity .btn-minus,
+    .add-quantity .btn-plus{
+        outline: none;
+        border:1px solid #cbd5e1;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 12px;
+        color: rgb(15, 23, 42);
+        background-color: #fff;
+    }
+    
+    .btn-minus:disabled{
+        border: 1px solid #bec2c8;
+        cursor: auto;
+        color: #bec2c8;
+    }
+    
+    .btn-minus:hover, 
+    .btn-plus:hover {
+    border: 1px solid #000;
+    }
+    
+    .btn-minus:hover:disabled{
+        border: 1px solid #bec2c8;
+    }
+    
+    .btn-add-to-cart{
+        flex: 2;
+        border: none;
+        outline: none;
+        border-radius: 500px;
+        font-family: inherit;
+        background-color: #0f172a;
+        color: #fff;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        gap: 15px;
+        font-size: 16px;
+        font-weight:500;
+        cursor:pointer;
+        box-shadow: 0 10px 15px #0000;
+        align-self: stretch;
+    }
+    
+    .btn-add-to-cart:hover {
+        opacity: .95;
+    }
+    
+    .btn-add-to-cart:active {
+        outline: 3px solid #0284c7;
+    }
+    
+    .info-quantity{
+        display: flex;
+        justify-content: space-between;
+        color: #475569;
+        font-size: 16px;
+        
+    }
+    
+    .price-tax{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .info-quantity .value{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        text-align: right;
+    }
+    
+    .total{
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        padding: 12px 0;
+        border-top: 1px solid;
+    }

@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primaria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+</head>
+<header>
+    <div class="header container">
+        <h1 class="logo"><img src="imagenes/logo-removebg-preview.png" alt="logo"></h1>
+
+        <nav>
+            <ul class="menu-nav">
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="oficina.php">Oficina</a></li>
+                <li><a href="prescolar.php">Prescolar</a></li>
+                <li><a href="primaria.php">Primaria</a></li>
+                <li><a href="secundaria.php">Secundaria</a></li>
+                           
+            </ul>
+        </nav>
+        <div class="menu-hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="heart">
+            <i class="fa-solid fa-heart" style="color: #ec3500;"></i>
+        </div>
+
+        <div class="carrito">
+            <label for="usuario-icono">
+                <i class="fa-solid fa-user" id="usuario-icono" name="usuario-icono"></i></label>
+            <div class="opciones-usuario" id="opciones-usuario">
+              <ul>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="../Login/Login.html">Cerrar Sesión</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <script>
+            const usuarioIcono = document.getElementById('usuario-icono');
+            const opcionesUsuario = document.getElementById('opciones-usuario');
+
+        usuarioIcono.addEventListener('click', () => {
+         opcionesUsuario.classList.toggle('mostrar'); /* Agregamos o quitamos la clase mostrar */
+        });
+
+        document.addEventListener('click', (e) => {
+        if (!e.target.closest('.carrito')) { /* Si el clic no es dentro del elemento .carrito */
+            opcionesUsuario.classList.remove('mostrar'); /* Ocultamos las opciones */
+        }
+        });
+          </script>
+
+        <!--Icono -->
+<i class='bx bxs-cart-alt' id="cart-icon" ></i> 
+
+        <!--Carrito-->
+<div class="cart" >
+<h2><div class="cart-title">Tu Carrito</div></h2>
+
+        <!--Contenido -->
+<div class="cart-content" >
+ 
+</div>
+
+      <!--Total-->
+<div class="total">
+    <div class="total-tittle">Total</div>
+    <div class="total-price">$0</div>
+</div>
+     <!--Comprar-->
+<button type="button" class="btn-buy">Comprar Ahora</button>
+
+<i class="fa-solid fa-xmark" id="close-cart"></i>    
+
+</div>
+
+    </div>
+    <div class="menu-responsive">
+
+        <h1 class="Logo-responsive"><img src="imagenes/logo-removebg-preview.png" alt="logo"></h1>
+
+        <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Doloribus a voluptates, beatae, voluptatum reiciendis labore 
+        saepe repellendus temporibus quaerat error hic illo autem nobis?
+        </p>
+    <div class="container-social-responsive">
+        <a href="#"  class="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+
+        </a>
+        <a href="#"  class="Instagram">
+            <i class="fa-brands fa-instagram"></i>   
+        </a>
+        <a href="#"  class="Whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+    <nav>
+        <ul class="menu-nav-responsive">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="oficina.html">Oficina</a></li>
+            <li><a href="prescolar.html">Prescolar</a></li>
+            <li><a href="primaria.html">Primaria</a></li>
+            <li><a href="secundaria.html">Secundaria</a></li>
+        </ul>
+    </nav>
+    <div class="btn-close-responsive">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    </div>
+    <div id="overlay"></div> 
+
+</header>
+<body>
+    <section class="container container-productos-relacionados">
+        <h2>Primaria</h2>
+    
+        <div class="cards-productos-relacionados">
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria01.jpg" alt="Producto Relacionado 1">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$2,00</span>
+                    
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria02.jpg" alt="Producto Relacionado 2">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$3,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria03.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria04.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria05.jpg" alt="Producto Relacionado 1">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$2,00</span>
+                    
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria06.jpg" alt="Producto Relacionado 2">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$3,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria07.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria08.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria09.jpg" alt="Producto Relacionado 1">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$2,00</span>
+                    
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria10.jpg" alt="Producto Relacionado 2">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$3,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria11.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria12.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria13.jpg" alt="Producto Relacionado 1">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$2,00</span>
+                    
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria14.jpg" alt="Producto Relacionado 2">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$3,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria15.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria16.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+
+   
+
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria18.jpg" alt="Producto Relacionado 1">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$2,00</span>
+                    
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria22.jpg" alt="Producto Relacionado 2">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$3,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria21.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria23.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria19.jpg" alt="Producto Relacionado 1">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$2,00</span>
+                    
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria26.jpg" alt="Producto Relacionado 2">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$3,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria25.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria20.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria28.jpg" alt="Producto Relacionado 1">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$2,00</span>
+                    
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria30.jpg" alt="Producto Relacionado 2">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$3,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria29.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card-producto-relacionado">
+            <div class="image-product">
+                <img src="imagenes/primaria27.jpg" alt="Producto Relacionado 3">
+    
+                <div class="button-group">
+                    <button class="btn-add-to-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Añadir a la cesta
+                    </button>
+                    <button class="btn-quick-view">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Vista Previa
+                    </button>
+                </div> 
+            </div>
+            
+            <div class="info-product">
+                <div class="container-title">
+                    <h4>libreta para la clase</h4>
+                    <p>Color Morado</p>
+                </div>
+                <div class="container-price">
+                    <span>$15,00</span>
+                    <p>
+                        <i class="fa-solid fa-heart"></i>
+                        Guardar
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    
+        </section>
+</body>
+<footer>
+         
+    <div class="container footer">
+       
+            <h1 class="logo-footer"><img src="imagenes/logo-removebg-preview.png" alt="logo"></h1>
+
+            <div class="container-social">
+            <a href="#"  class="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="#"  class="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="#"  class="Whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Whatsapp</span>
+            </a>
+    </div>
+
+    <div class="user-footer">
+        <ul>
+            <li><a href="#">Mi Cuenta</a></li>
+            <li><a href="#">Registrate</a></li>
+            <li><a href="#">Contactanos</a></li>
+        </ul>
+    </div>
+    <div class="container-policies">
+        <ul>
+
+            <li><a href="#">Politica de privacidad</a></li>
+            <li><a href="#">Politica de Devolucion</a></li>
+            <li><a href="#">Politica de Comprar</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+    </div>
+   </div> 
+
+</footer>
+<script src="index.js"></script>
+</html>
