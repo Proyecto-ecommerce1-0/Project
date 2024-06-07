@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+  width: 100%;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+header img {
+  width: 100px; /* Ajustar el ancho del logo */
+  height: auto; /* Ajustar la altura del logo proporcionalmente */
+}
+
+.container-logo {
+  margin-left: 4rem;
+  padding: 10px 10px 0 10px;
+}
+
+.container-titulo {
+  margin: 0 auto; /* Centra horizontalmente el título */
+  flex-grow: 1; /* Ocupa el espacio disponible */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.container-usuario {
+  margin-left: auto; /* Coloca el contenedor del icono a la derecha */
+  margin-right: 6.5rem;
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.container-usuario:hover {
+  background-color: #fde2f0;
+  transition: .9s;
+}
+
+#usuario-icono {
+  font-size: 1.8rem;
+}
+
+.fa-solid.fa-user {
+  font-size: 1.5rem; /* Ajustar el tamaño del icono */
+  cursor: pointer; /* Cambiar el cursor a mano */
+  display: flex;
+  text-align: end;
+}
+
+.opciones-usuario {
+  display: none; /* Ocultamos las opciones por defecto */
+  position: absolute; /* Posicionamos las opciones absolutamente */
+  top: 10%; /* Ajustamos la posición vertical */
+  right: 2%; /* Ajustamos la posición horizontal */
+  background-color: #f9f9f9; /* Color de fondo de las opciones */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra debajo de las opciones */
+  overflow: hidden;
+  width: auto;
+  border-radius: 10px;
+}
+
+.opciones-usuario.mostrar {
+  display: block; /* Mostramos las opciones cuando se agrega la clase mostrar */
+  transition: .9s;
+}
+
+.opciones-usuario ul {
+  list-style: none; /* Quitamos los puntos de la lista */
+  margin: 0; /* Quitamos el margen de la lista */
+  padding: 0; /* Quitamos el padding de la lista */
+}
+
+.opciones-usuario li {
+  margin: 5px 15px;
+  width: 100%;
+  height: 20px;
+  align-items: center;
+  display: flex;
+  font-size: rem;
+}
+
+.opciones-usuario a {
+  text-decoration: none; /* Quitamos el subrayado de los enlaces */
+  color: rgb(0, 0, 0); /* Color de los enlaces */
+}
+
+.opciones-usuario a:hover {
+  cursor: pointer;
+}
+
+.li-box:hover {
+  background-color: #fde2f0;
+}
+
+
+/* BODY ADMINISTRADOR */
+
+.Admin {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rosybrown;
+}
+
+.titulo-administrador {
+  text-align: center;
+  margin: 20px;
+}
+
+.container-modulos {
+  padding: 50px 0;
+  max-width: 750px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  display: flex;
+  background-color: rebeccapurple;
+  align-items: center;
+  justify-content: center;
+}
+
+.modulos-box {
+  background-color: rgb(255, 255, 255);
+  max-width: 15rem;
+  height: 200px;
+  border: 2.5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px 50px;
+}
+
+.modulos-box:hover {
+  background-color: #fde2f0;
+}
+
+.modulos-box img {
+  width: 100px;
+  height: 100px;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 0.5rem 15px;
+  text-decoration: none;
+  background-color: #f788c1;
+  display: block;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: .5s;
+  background-color: black;
+}
+
+/* PRODUCTOS */
+
+.modulos-box-productos {
+  background-color: rgb(255, 255, 255);
+  border: 2.5px solid black;
+  border-radius: 10px;
+  background-color: yellow;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-input {
+  padding: 10px;
+  max-width: 550px;
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 0rem;
+  font-size: 0.5rem;
+  justify-content: space-between;
+}
+
+.input {
+  background-color: red;
+  width: 49%;
+  text-align: center;
+  gap: 10rem 0;
+
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ccc;
+}
+
+
+
+
+.modulos-box:hover {
+  background-color: #fde2f0;
+}
+
+.btn-p {
+  width: 100%;
+  border-radius: .5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-p:hover {
+  transition: .5s;
+  background-color: rgb(235, 146, 146);
+}
+
+
+
+
+
+/* RESOLUCION RESPONSIVE*/
+
+
+@media (max-width: 768px) {
+  .container-logo {
+    margin-left: .2rem;
+    margin-right: auto;
+  }
+
+  .container-usuario {
+    margin-right: 2.5rem;
+    margin-left: auto;
+  }
+
+  .container-modulos {
+    margin: 0;
+  }
+
+  .modulos-box {
+    margin: 20px auto;
+  }
+  .modulos-box-productos {
+    max-width: 400px;
+  }
+
+  .container-input {
+    max-width: 350px;
+  }
+}
