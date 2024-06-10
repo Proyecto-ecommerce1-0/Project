@@ -29,11 +29,7 @@ img{
 
 header{
     border-bottom: 1px solid #f1f5f9  ;
-    position:  sticky;
-    top: 0;
-    z-index: 2;
     background-color: #fff;
-
 }
 
 .header{
@@ -299,7 +295,14 @@ header{
 }
 
 
-
+.imagen-producto{
+    position: relative;
+    border-radius:10px;
+    overflow: hidden;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+}
 
 /*** PRODUCTOOOO ****/
 
@@ -862,6 +865,14 @@ color: #4b5563;
 /***** TABLEEEEEEEEEEEEEEEET *****/
 
 @media(max-width: 700px){
+
+
+    header {
+        display: flex;
+        justify-content: end;
+    }
+
+
     .container{
         max-width: 500px;
     }
