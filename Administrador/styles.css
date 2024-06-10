@@ -313,14 +313,16 @@ textarea:focus {
 /* LISTA PRODUCTOS */
 
 .lista-productos {
-  background-color: orange;
   height: 1200px;
-  padding: 50px;
+  padding: 20px 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  border-top: 3px solid #f1f5f9;
+  
 }
 
 .product-display {
   margin: 2rem 0;
-  background-color: aqua;
 }
 
 .product-display .product-display-table {
@@ -335,7 +337,7 @@ textarea:focus {
 .product-display .product-display-table th {
   padding: 0.25rem;
   font-size: 1rem;
-  background-color: red;
+  background-color: #ffb7b7;
 }
 
 .product-display .product-display-table td {
