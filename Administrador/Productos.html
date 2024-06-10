@@ -56,56 +56,105 @@
         <div class="container-modulos">    
             <div class="modulos-box-productos">
 
-
-            <div class="select-imagen">
-                <div class="drop-zone">
-                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                    <p>Subir una imagen o arrastrar y soltar<br>PNG, JPG, WEBP hasta 5MB</p>
-                    <input type="file" id="fileInput" style="display: none;">
-                </div>
-            </div>
-                <script src="script.js"></script>
-
-                <div class="container-input">
-                    
-                    <div class="input">
-                        <label for="nombre-producto"><h2>Nombre del Producto</h2>
-                        <input id="nombre-producto" type="text" placeholder="Ingrese el nombre del producto" required></label>
-                    </div>
-
-                    <div class="input">
-                        <label for="codigo-producto"><h2>Código del Producto</h2>
-                        <input id="codigo-producto" type="text" placeholder="Ingrese el codigo del producto" required></label>
-                    </div>
-
-                    <div class="input">
-                        <label for="descripcion"><h2>Descripcion Corta</h2>
-                        <textarea name="descripcion" id="descripcion" cols="30" rows="10" style="resize: vertical;"></textarea></label>
-                    </div>
-
-                    <div class="input">
-                        <label for="descripcion"><h2>Descripcion Larga</h2>
-                        <textarea name="descripcion" id="descripcion" cols="30" rows="10" style="resize: vertical;"></textarea></label>
-                    </div>
-
-                    <div class="input">
-                        <label for="precio-producto"><h2>Precio del Producto</h2>
-                        <input id="precio-producto-larga" type="number" placeholder="Ingresa el precio del producto" required></label>
-                    </div>
-
-                    <div class="input">
-                        <label for="status-producto"><h2>Status</h2>
-                          <select name="status-producto" id="status-producto" required></label>
-                            <option value="Inactivo">Inactivo</option>
-                            <option value="Activo">Activo</option>
-                          </select>
+                <form action="php/productos.php" method="POST" enctype="multipart/form-data">
+                    <div class="select-imagen">
+                        <div class="drop-zone">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                            <p>Subir una imagen o arrastrar y soltar<br>PNG, JPG, WEBP hasta 5MB</p>
+                            <input type="file" id="fileInput" name="imagen" style="display: none;">
                         </div>
-                    
-                    <input type="submit" value="AGREGAR PRODUCTO" class="btn-p" name="add_product">
+                    </div>
+                        <script src="script.js"></script>
+                            <div class="container-input">
 
-                </div>
+                                <div class="input">
+                                    <label for="nombre-producto"><h2>Nombre del Producto</h2>
+                                    <input id="nombre-producto" name="nombre-producto" type="text" placeholder="Ingrese el nombre del producto" required></label>
+                                </div>
+
+                                <div class="input">
+                                    <label for="codigo-producto"><h2>Código del Producto</h2>
+                                    <input id="codigo-producto" name="codigo-producto" type="text" placeholder="Ingrese el codigo del producto" required></label>
+                                </div>
+
+                                <div class="input">
+                                    <label for="descripcion-corta"><h2>Descripcion Corta</h2>
+                                    <textarea name="descripcion-corta" id="descripcion-corta" cols="30" rows="10" style="resize: vertical;" placeholder="Ingresa lo mas destacado del producto"></textarea></label>
+                                </div>
+
+                                <div class="input">
+                                    <label for="descripcion-larga"><h2>Descripcion Larga</h2>
+                                    <textarea name="descripcion-larga" id="descripcion-larga" cols="30" rows="10" style="resize: vertical;" placeholder="Ingresa todos los detalles del producto"></textarea></label>
+                                </div>
+
+                                <div class="input">
+                                    <label for="precio-producto"><h2>Precio del Producto</h2>
+                                    <input id="precio-producto" name="precio-producto" type="number" placeholder="Ingresa el precio del producto" required></label>
+                                </div>
+
+                                <div class="input">
+                                    <label for="status-producto"><h2>Status</h2></label>
+                                    <select name="status-producto" id="status-producto" required>
+                                        <option value="0">Disponible</option>
+                                        <option value="1">Agotado</option>
+                                    </select>
+                                    </div>
+                                
+                                <input type="submit" value="AGREGAR PRODUCTO" class="btn-p" name="agregar_producto">
+                            </div>
+                </form>
             </div>
         </div>
     </div>
+
+<section>
+    <div class="lista-productos">
+        <div class="product-display">
+            <table class="product-display-table">
+               <thead>
+               <tr>
+                  <th>Imagen del producto</th>
+                  <th>Nombre del producto</th>
+                  <th>Codigo del producto</th>
+                  <th>Descripcion corta del producto</th>
+                  <th>Descripcion larga del producto</th>
+                  <th>Precio del producto</th>
+                  <th>Status</th>
+                  <th>Acciones</th>
+               </tr>
+               </thead>
+               <tr>
+                  <td><img src="uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td>$<?php echo $row['price']; ?>/-</td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td>
+                     <a href="admin_update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i></a>
+                     <a href="admin_page.php?delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"></i></a>
+                  </td>
+               </tr>
+
+               <tr>
+                  <td><img src="uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td>$<?php echo $row['price']; ?>/-</td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td>
+                     <a href="admin_update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i></a>
+                     <a href="admin_page.php?delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"></i></a>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+    </div>
+
+</section>
 </body>
 </html>
