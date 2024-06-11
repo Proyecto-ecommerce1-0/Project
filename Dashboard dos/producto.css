@@ -833,17 +833,28 @@ color: #4b5563;
      }
 
      .logo{
-      flex: 1;
-      order: 2;
-      text-align: center;
-    
-     }
-     .carrito{
         flex: 1;
-        order: 3;
-        justify-content: right;
-     }
-
+        order: 2;
+        text-align: center;
+      
+       }
+       .carrito{
+          flex: 1;
+          order: 3;
+          justify-content: right;
+          margin-right: 1px;
+       }
+       .heart{
+          flex:1;
+          order:4;
+          justify-content: right;
+       }
+  
+       .car{
+          flex:1;
+          order:5;
+          justify-content: right;
+       }
     
      .header .menu-nav{
         display: none;
