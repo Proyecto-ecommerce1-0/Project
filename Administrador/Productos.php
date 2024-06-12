@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="https://kit.fontawesome.com/56aef74e76.js" crossorigin="anonymous"></script>
 </head>
 
@@ -94,68 +94,59 @@
 
                                 <div class="input">
                                     <label for="status-producto"><h2>Status</h2></label>
-                                    <select name="status-producto" id="status-producto" required>
-                                        <option value="Disponible">Disponible</option>
-                                        <option value="Agotado">Agotado</option>
+                                    <select name="status-producto" id="status-producto">
+                                        <option value="disponible">Disponible</option>
+                                        <option value="agotado">Agotado</option>
                                     </select>
                                     </div>
                                 
                                 <input type="submit" value="AGREGAR PRODUCTO" class="btn-p" name="agregar_producto">
                             </div>
                 </form>
+               
             </div>
         </div>
     </div>
 
-<section>
-    <div class="lista-productos">
-        <h1>LISTA DE PRODUCTOS</h1>
-        <div class="product-display">
-            <table class="product-display-table">
-               <thead>
-               <tr>
-                  <th>Imagen del producto</th>
-                  <th>Nombre del producto</th>
-                  <th>Codigo del producto</th>
-                  <th>Descripcion corta del producto</th>
-                  <th>Descripcion larga del producto</th>
-                  <th>Precio del producto</th>
-                  <th>Status</th>
-                  <th>Acciones</th>
-               </tr>
-               </thead>
-               <tr>
-                  <td><img src="uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
-                  <td><?php echo $row['name']; ?></td>
-                  <td><?php echo $row['name']; ?></td>
-                  <td><?php echo $row['name']; ?></td>
-                  <td><?php echo $row['name']; ?></td>
-                  <td>$<?php echo $row['price']; ?>/-</td>
-                  <td><?php echo $row['name']; ?></td>
-                  <td>
-                     <a href="admin_update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i></a>
-                     <a href="admin_page.php?delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"></i></a>
-                  </td>
-               </tr>
-
-               <tr>
-                  <td><img src="uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
-                  <td><?php echo $row['name']; ?></td>
-                  <td><?php echo $row['name']; ?></td>
-                  <td><?php echo $row['name']; ?></td>
-                  <td><?php echo $row['name']; ?></td>
-                  <td>$<?php echo $row['price']; ?>/-</td>
-                  <td><?php echo $row['name']; ?></td>
-                  <td>
-                     <a href="admin_update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i></a>
-                     <a href="admin_page.php?delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"></i></a>
-                  </td>
-               </tr>
-            </table>
-         </div>
-      </div>
-    </div>
-
-</section>
+    <section>
+        <div class="lista-productos">
+            <h1 class="titulo-lista-productos">LISTA DE PRODUCTOS</h1>
+            <table>
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Código</th>
+                <th>Descripción Corta</th>
+                <th>Descripción Larga</th>
+                <th>Precio</th>
+                <th>Status</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                require_once 'php/lista_productos.php';
+                foreach ($productos as $producto) {
+           ?>
+            <tr>
+            <td><img src="<?php echo $producto['Imagen'];?>" alt="<?php echo $producto['Nombre'];?>" height="100"></td>
+            
+                <td><?php echo $producto['Nombre'];?></td>
+                <td><?php echo $producto['Codigo'];?></td>
+                <td><?php echo $producto['Descripcion_corta'];?></td>
+                <td><?php echo $producto['Descripcion_larga'];?></td>
+                <td><?php echo $producto['Precio'];?></td>
+                <td><?php echo $producto['Status_producto'];?></td>
+               <td>
+                <a href="admin_update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i> edit </a>
+               <a href="admin_page.php?delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"></i> delete </a>
+                </td>
+            </tr>
+            <?php }?>
+        </tbody>
+    </table>
+        </div>
+    </section>
 </body>
 </html>
