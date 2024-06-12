@@ -12,19 +12,27 @@ if (isset($_POST['agregar_producto'])) {
 
     // Subir imagen
     $imagen = $_FILES['imagen'];
-    $ruta_imagen = '../Imagenes/Productos_Subidos/' . uniqid() . '_' . $imagen['name'];
-    move_uploaded_file($imagen['tmp_name'], $ruta_imagen);
+    $ruta_imagen = 'Imagenes/Productos_Subidos/' . uniqid() . '_' . $imagen['name'];
+    move_uploaded_file($imagen['tmp_name'], '../' . $ruta_imagen);
 
     // Insertar datos en la base de datos
-    $query = "INSERT INTO productoss (Nombre, Codigo, Descripcion_corta, Descripcion_larga, Precio, Status_productos, Imagen) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $query = "INSERT INTO productoss (Nombre, Codigo, Descripcion_corta, Descripcion_larga, Precio, Status_producto, Imagen) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conexion->prepare($query);
-    $stmt->bind_param("sssssis", $nombre_producto, $codigo_producto, $descripcion_corta, $descripcion_larga, $precio_producto, $status_producto, $ruta_imagen);
+    $stmt->bind_param("sssssss", $nombre_producto, $codigo_producto, $descripcion_corta, $descripcion_larga, $precio_producto, $status_producto, $ruta_imagen);
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
-        echo "Producto agregado exitosamente";
-    } else {
-        echo "Error al agregar producto";
+        echo '
+        <script>
+            alert("Producto registrado exitosamente");
+            window.location = "../productos.php";
+        </script>';
+    }else{
+        echo '
+        <script>
+            alert("Ha ocurrido un error al registrar el producto");
+            window.location = "../productos.php";
+        </script>';
     }
 }
 
