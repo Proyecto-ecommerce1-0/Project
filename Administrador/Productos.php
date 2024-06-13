@@ -111,9 +111,12 @@
     <section>
         <div class="lista-productos">
             <h1 class="titulo-lista-productos">LISTA DE PRODUCTOS</h1>
+
+            <div class="contenedor-tabla">
             <table>
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Imagen</th>
                 <th>Nombre</th>
                 <th>Código</th>
@@ -130,27 +133,28 @@
                 foreach ($productos as $producto) {
            ?>
             <tr>
-            <td><img src="<?php echo $producto['Imagen'];?>" alt="<?php echo $producto['Nombre'];?>" height="100"></td>
-            
+                <td><?php echo $producto['Id_producto'];?></td>
+                <td><img src="<?php echo $producto['Imagen'];?>" alt="<?php echo $producto['Nombre'];?>" height="50"></td>
                 <td><?php echo $producto['Nombre'];?></td>
                 <td><?php echo $producto['Codigo'];?></td>
                 <td><?php echo $producto['Descripcion_corta'];?></td>
                 <td><?php echo $producto['Descripcion_larga'];?></td>
-                <td><?php echo $producto['Precio'];?></td>
+                <td>$<?php echo $producto['Precio'];?></td>
                 <td><?php echo $producto['Status_producto'];?></td>
                <td>
 
                <label for="btn-editar">
-                <i class="fas fa-edit btn" name="btn-editar">  Editar </i></label>
+                <a class="btn" href="productos.php"><i class="fa-solid fa-pen-to-square"></i> Editar</label></a>
 
-                
-                <a href="php/eliminar_producto.php?id=<?php echo $producto['Id'];?>" class="btn" onclick="return confirm('¿Estás seguro de eliminar este producto?');"><i class="fas fa-trash"></i> Eliminar</a>
+                <a href="php/eliminar_producto.php?id=<?php echo $producto['Id_producto'];?>" class="btn" onclick="return confirm('¿Estás seguro de eliminar este producto?');"><i class="fa-solid fa-trash"></i> Eliminar</a>
                 </td>
             </tr>
             <?php }?>
         </tbody>
     </table>
-        </div>
+    </div>
+</div>
+
     </section>
 </body>
 </html>
