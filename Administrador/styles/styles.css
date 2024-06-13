@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+  font-family: sans-serif;
 }
 
 /* PALETA DE COLORES */
@@ -16,7 +16,7 @@ header {
   display: flex;
   align-items: center; /* Centra verticalmente los elementos */
   width: 100%;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 3px solid #f1f5f9;
 }
 
 header img {
@@ -323,7 +323,7 @@ textarea:focus {
   height: 1200px;
   padding: 20px 50px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-top: 3px solid #f1f5f9;
 }
 
@@ -334,25 +334,46 @@ textarea:focus {
 table {
   border-collapse: collapse;
   width: 100%;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 th {
+  padding: 10px;
+  text-align: center;
   background-color: #ffb7b7;
 }
 
-tr:nth-child(even) {
-  background-color: #f9f9f9;
+thead th:first-child{
+  border-radius: 10px 0 0 0;
 }
+
+thead th:last-child{
+  border-radius: 0 10px 0 0;
+}
+
+.titulos-tabla {
+  background-color: red;
+  height: 100px;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+tr .btn {
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+tr .btn:first-child {
+  background-color: red;
+}
+
 
 /* RESOLUCION RESPONSIVE*/
 
 @media (max-width: 768px) {
+
   .container-logo {
     margin-left: 0.2rem;
     margin-right: auto;
@@ -378,11 +399,8 @@ tr:nth-child(even) {
     max-width: 350px;
   }
 
-  .product-display {
+  .contenedor-tabla {
     overflow-y: scroll;
   }
 
-  .product-display .product-display-table {
-    width: 80rem;
-  }
 }
