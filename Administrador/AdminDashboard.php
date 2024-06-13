@@ -55,17 +55,17 @@
 
         <div class="container-modulos">    
             <div class="modulos-box">
-                <img src="/Administrador/Imagenes/productos.png" alt="Modulo productos">
+                <img src="Imagenes/productos.png" alt="Modulo productos">
                 <a class="btn" href="AdminDashboard.php">CLIENTES</a>
             </div>
 
             <div class="modulos-box">
-                <img src="/Administrador/Imagenes/productos.png" alt="Modulo productos">
+                <img src="Imagenes/productos.png" alt="Modulo productos">
                 <a class="btn" href="productos.php">PRODUCTOS</a>
             </div>
 
             <div class="modulos-box">
-                <img src="/Administrador/Imagenes/productos.png" alt="Modulo productos">
+                <img src="Imagenes/productos.png" alt="Modulo productos">
                 <a class="btn" href="AdminDashboard.php">VENTAS</a>
             </div>
         </div>
