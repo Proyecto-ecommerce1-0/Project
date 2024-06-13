@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-06-2024 a las 14:29:26
+-- Tiempo de generación: 13-06-2024 a las 02:26:42
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -2376,7 +2376,7 @@ CREATE TABLE `productoss` (
   `Descripcion_corta` text COLLATE utf8_spanish_ci NOT NULL,
   `Descripcion_larga` text COLLATE utf8_spanish_ci NOT NULL,
   `Precio` decimal(10,2) NOT NULL,
-  `Status_producto` enum('Disponible','Agotado') COLLATE utf8_spanish_ci DEFAULT NULL,
+  `Status_producto` enum('disponible','agotado') COLLATE utf8_spanish_ci NOT NULL,
   `Imagen` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -2385,8 +2385,8 @@ CREATE TABLE `productoss` (
 --
 
 INSERT INTO `productoss` (`Id_producto`, `Nombre`, `Codigo`, `Descripcion_corta`, `Descripcion_larga`, `Precio`, `Status_producto`, `Imagen`) VALUES
-(7, 'dasdas', 'dadas', 'dasdasdasd', 'asdasdasdasdasdasdas', '50.00', '', 0x2e2e2f496d6167656e65732f50726f647563746f735f53756269646f732f363636366231353061333464635f3833383736322e6a7067),
-(8, 'dasdas', 'dadas', 'dasdasdasd', 'asdasdasdasdasdasdas', '50.00', '', 0x2e2e2f496d6167656e65732f50726f647563746f735f53756269646f732f363636366231383861366638355f61747461636b2d6f6e2d746974616e2d6d696b6173612d6c6576692d666f72746e6974652d68642d77616c6c70617065722d75686470617065722e636f6d2d3834354031406b2e6a7067);
+(36, 'Bolso gris', 'BOL', 'Bolso color gris', 'Bolso Gris TamaÃ±o Grande 1 Bolsillo', '40.00', 'disponible', 0x496d6167656e65732f50726f647563746f735f53756269646f732f363636613361323938316339645f626f6c736f2e6a7067),
+(39, 'Libreta', 'LIB', 'Libreta negra', 'Libreta negra tamaÃ±o grande de 12 materias', '10.00', 'disponible', 0x496d6167656e65732f50726f647563746f735f53756269646f732f363636613363366535353463335f6c6962726574612e6a7067);
 
 -- --------------------------------------------------------
 
@@ -2665,7 +2665,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `productoss`
 --
 ALTER TABLE `productoss`
-  MODIFY `Id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `Id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT de la tabla `valoracion`
