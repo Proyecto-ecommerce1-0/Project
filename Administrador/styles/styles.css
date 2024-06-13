@@ -35,6 +35,13 @@ header img {
   text-align: center; /* Centra el texto horizontalmente */
 }
 
+
+.container-titulo a{
+  text-decoration: none;
+  color: black;
+
+}
+
 .container-usuario {
   margin-left: auto; /* Coloca el contenedor del icono a la derecha */
   margin-right: 6.5rem;
@@ -342,19 +349,6 @@ th {
 tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* RESOLUCION RESPONSIVE*/
 
