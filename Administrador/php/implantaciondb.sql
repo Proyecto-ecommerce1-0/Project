@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-06-2024 a las 02:26:42
+-- Tiempo de generación: 13-06-2024 a las 12:39:33
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -2379,14 +2379,6 @@ CREATE TABLE `productoss` (
   `Status_producto` enum('disponible','agotado') COLLATE utf8_spanish_ci NOT NULL,
   `Imagen` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Volcado de datos para la tabla `productoss`
---
-
-INSERT INTO `productoss` (`Id_producto`, `Nombre`, `Codigo`, `Descripcion_corta`, `Descripcion_larga`, `Precio`, `Status_producto`, `Imagen`) VALUES
-(36, 'Bolso gris', 'BOL', 'Bolso color gris', 'Bolso Gris TamaÃ±o Grande 1 Bolsillo', '40.00', 'disponible', 0x496d6167656e65732f50726f647563746f735f53756269646f732f363636613361323938316339645f626f6c736f2e6a7067),
-(39, 'Libreta', 'LIB', 'Libreta negra', 'Libreta negra tamaÃ±o grande de 12 materias', '10.00', 'disponible', 0x496d6167656e65732f50726f647563746f735f53756269646f732f363636613363366535353463335f6c6962726574612e6a7067);
 
 -- --------------------------------------------------------
 
