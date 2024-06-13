@@ -11,11 +11,11 @@
 
 <header class="container-header">
     <div class="container-logo">
-        <h1 class="logo"><img src="/Dashboard dos/imagenes/logo-removebg-preview.png" alt="logo"></h1>
+        <h1 class="logo"><img src="Imagenes/logo-removebg-preview.png" alt="logo"></h1>
     </div>
 
     <div class="container-titulo">
-        <h1 class="titulo">ADMINISTRADOR</h1>
+        <a href="AdminDashboard.php"><h1 class="titulo">ADMINISTRADOR</h1></a>
     </div>
 
     <div class="container-usuario">
@@ -139,8 +139,12 @@
                 <td><?php echo $producto['Precio'];?></td>
                 <td><?php echo $producto['Status_producto'];?></td>
                <td>
-                <a href="admin_update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i> edit </a>
-               <a href="admin_page.php?delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"></i> delete </a>
+
+               <label for="btn-editar">
+                <i class="fas fa-edit btn" name="btn-editar">  Editar </i></label>
+
+                
+                <a href="php/eliminar_producto.php?id=<?php echo $producto['Id'];?>" class="btn" onclick="return confirm('¿Estás seguro de eliminar este producto?');"><i class="fas fa-trash"></i> Eliminar</a>
                 </td>
             </tr>
             <?php }?>
